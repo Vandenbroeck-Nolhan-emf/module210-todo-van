@@ -1,5 +1,5 @@
 //const apiEndpoint = "https://fa-todo-backend-baqmes.azurewebsites.net/api/tasks";
-const apiEndpoint = "https://baqtestappbackend.blackglacier-c7b0844e.northeurope.azurecontainerapps.io/api/tasks";
+const apiEndpoint = "https://app-210-fd22-vandenbroeck-nolhan.proudbay-3e611be7.northeurope.azurecontainerapps.io/api/tasks";
 
 $(document).ready(function () {
   // Charger les tâches au démarrage
@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   // Ajouter une nouvelle tâche
   $("#todo-form").on("submit", async function (e) {
-    e.preventDefault();
+    e.preventDefault();apiEndpoint 
 
     const description = $("#todo-input").val().trim();
     if (description === "") return;
