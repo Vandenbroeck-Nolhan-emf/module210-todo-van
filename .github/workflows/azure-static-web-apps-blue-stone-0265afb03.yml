@@ -47,7 +47,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
       - name: Index Exist Verification
         run: |
-          if [ -f "../src/frontend/index.html"]; then
+          if [ -f "./src/frontend/index.html"]; then
             echo "Le fichier index.html existe"
           else
             echo "Erreur : index.html n'existe pas !"
