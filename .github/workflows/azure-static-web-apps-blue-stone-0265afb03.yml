@@ -52,7 +52,12 @@ jobs:
           else
             echo "Erreur : index.html n'existe pas !"
             exit 1
-          fi
+          fi  
+      - name: Run Lighthouse on urls and validate with lighthouserc
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: 'https://todo.nolhanvandenbroe.emf-informatique.ch/'
+          configPath: './lighthouserc.json'
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
